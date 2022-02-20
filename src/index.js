@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//add App component to the root id
 ReactDOM.render(
   <React.StrictMode>
     <App />
