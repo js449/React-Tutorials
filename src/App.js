@@ -3,31 +3,34 @@ import logo from "./logo.svg";
 import "./App.css";
 
 //variable
-let name = "jay";
+
 function App() {
   return (
     //JSX Fragment starts here --- from here()
+    //this is how we use bootstrap components(navbar here).
     <>
-      <nav>
-        <li>Home</li>
-        <li>about</li>
-        <li>contact</li>
-      </nav>
-      <div className="container">
-        {/* whatever written in curly braces is javascript(this is how we write javascript inside JSX) */}
-        <h1>Hello {name}</h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quibusdam,
-        sequi libero harum eaque fugit sapiente quis, natus quisquam nostrum
-        possimus, vero asperiores nulla consectetur illum cumque deleniti
-        adipisci maiores? A quibusdam in iste reiciendis modi, provident
-        voluptate quas consequuntur. Fuga, harum sapiente ducimus facere nostrum
-        quidem delectus doloribus sed accusamus eveniet autem, asperiores odio
-        quia odit, animi itaque labore! Culpa earum ullam quia cupiditate
-        inventore iure quidem accusantium dolorum dolor! Libero, nesciunt,
-        aliquam sed fuga provident vero odio laboriosam blanditiis ad
-        reprehenderit minus ex officia nobis voluptatibus cumque pariatur!
-      </div>
-      <div className="blank">Let's Go!</div>
+     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="/">Project_1</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/">about</a>
+        </li>
+      </ul>
+      <form className="d-flex">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button className="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
     </>
     //JSX --- end here
   );
