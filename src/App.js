@@ -1,36 +1,23 @@
 //once npm starts we only see the code written in App.js file
 import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 //variable
 
 function App() {
   return (
     //JSX Fragment starts here --- from here()
-    //this is how we use bootstrap components(navbar here).
+
     <>
-     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="/">Project_1</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/">about</a>
-        </li>
-      </ul>
-      <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+      {/* Navbar.js modules, once we write Nabar here, app.js file will automatically import Navbar component from Navbar.js module 
+      Here Navbar is a components and title & aboutText are its properties/variables which we are passing with the help of props and deciding 
+      that what value we have to give to these properties for e.g title = 'text_utils3'
+      we can  pass anything with the help of props. it could be an object, link, integer, string blah blah*/
+      }
+      <Navbar title = 'text_utils3' aboutText = 'About1' />
+      <Navbar/>
     </>
     //JSX --- end here
   );
