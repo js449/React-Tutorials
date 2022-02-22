@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import TextForm from "./components/TextForm";
 
 //variable
 
@@ -17,7 +18,10 @@ function App() {
       we can  pass anything with the help of props. it could be an object, link, integer, string blah blah*/
       }
       <Navbar title = 'text_utils3' aboutText = 'About1' />
-      <Navbar/>
+      {/* <Navbar/> */}
+      {/*my-3 class of container give little margin from the other component*/}
+      <div className="container my-3"><TextForm heading = 'Enter text to analyze below'/></div>
+      
     </>
     //JSX --- end here
   );
