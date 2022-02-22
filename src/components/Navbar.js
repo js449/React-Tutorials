@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 export default function Navbar(props) {
   return (
-    //this is how we use bootstrap components(navbar here).
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    //this is how we use bootstrap components(navbar here).to make the navbar dark change it to navbar-dark bg-dark(ist line)
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
           {/* dont forget javscript that we write inside JSX always goes inside curly braces for e.g props.title */}
         <a className="navbar-brand" href="/">{props.title}</a>
@@ -35,7 +35,8 @@ export default function Navbar(props) {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
+            {/* so primary - blue color, success green, danger - red(classnames) */}
+            <button className="btn btn-primary" type="submit">
               Search
             </button>
           </form>
