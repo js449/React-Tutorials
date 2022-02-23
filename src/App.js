@@ -1,9 +1,10 @@
 //once npm starts we only see the code written in App.js file
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import TextForm from "./components/TextForm";
+// import TextForm from "./components/TextForm";
+import About from "./components/About";
 
 //variable
 
@@ -20,7 +21,10 @@ function App() {
       <Navbar title = 'text_utils3' aboutText = 'About1' />
       {/* <Navbar/> */}
       {/*my-3 class of container give little margin from the other component*/}
-      <div className="container my-3"><TextForm heading = 'Enter text to analyze below'/></div>
+      <div className="container my-3">
+        {/* <TextForm heading = 'Enter text to analyze below'/> */}
+        <About/>
+        </div>
       
     </>
     //JSX --- end here
