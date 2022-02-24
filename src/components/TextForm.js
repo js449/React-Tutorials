@@ -33,6 +33,21 @@ const[text, setText] = useState('Enter text here');
         setText(event.target.value); //important this way we are setting up new text whenever we are updating text variable 
                                     //or can say whenever a event change(means this way we can write new text in the text variable)
     }
+  /**
+  * Copy text
+  */
+     const handleCopy = () => {
+      var text = document.getElementById("myBox");
+      text.select();
+      navigator.clipboard.writeText(text.value);
+  }
+  /**
+   * Remove extra spaces using regex
+   */
+   const handleExtraSpaces = () => {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "))
+  }
 
   return (
     <>
@@ -46,6 +61,8 @@ const[text, setText] = useState('Enter text here');
   <button className="btn btn-primary mx-2" onClick={handleOnClick}>Convert to Uppercase</button>
   <button className="btn btn-primary mx-2" onClick={handleOffClick}>Convert to Lowercase</button>
   <button className="btn btn-primary mx-2" onClick={handleClearText}>Clear the text</button>
+  <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text</button>
+  <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove extra spaces</button>
   </div>
   {/* my-2 give some margin */}
   <div className="container my-2">

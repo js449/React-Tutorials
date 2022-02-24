@@ -3,8 +3,8 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-// import TextForm from "./components/TextForm";
-import About from "./components/About";
+import TextForm from "./components/TextForm";
+// import About from "./components/About";
 
 //variable
 
@@ -22,8 +22,8 @@ function App() {
       {/* <Navbar/> */}
       {/*my-3 class of container give little margin from the other component*/}
       <div className="container my-3">
-        {/* <TextForm heading = 'Enter text to analyze below'/> */}
-        <About/>
+        <TextForm heading = 'Enter text to analyze below'/>
+        {/* <About/> */}
         </div>
       
     </>
